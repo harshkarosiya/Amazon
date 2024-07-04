@@ -1,7 +1,7 @@
 .main-grid{
     display: grid;
     font-family: Arial, Helvetica, sans-serif;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
     
 }
 
