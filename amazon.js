@@ -25,25 +25,28 @@ let producthtml = '';
 
 });
 document.querySelector('.js-main-grid').innerHTML = producthtml;
- 
-   function updateScore(){
-    let cartQuantity = 0;
-    cart.forEach((item) =>{
-        cartQuantity += item.quantity;
-    })
+
+export function updatescore(){
+  let cartQuantity = 0;
+  cart.forEach((cartItem) =>{
+      cartQuantity += cartItem.quantity;
+  });
     document.querySelector('.js-cart-quantity')
 .innerHTML = cartQuantity;
 };
-
+updatescore();
+console.log(cart);
 
  document.querySelectorAll('.js-add-to-cart')
  .forEach( (button) => {
      button.addEventListener('click', () => {
-        let productId = button.dataset.productId;
+      let productId = button.dataset.productId;
        addtoCart(productId);
-       updateScore();
+       updatescore();
      });
  });
  
+ 
+
  
  

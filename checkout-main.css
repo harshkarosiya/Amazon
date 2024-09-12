@@ -67,6 +67,12 @@ main{
     
     margin-bottom: 5px;
 }
+.quantity-label{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500; 
+    color: #000; 
+}
 .choose{
     font-size: 10px;
     font-weight: 600;
@@ -168,4 +174,36 @@ span{
 }
 .place-your-order:hover{
     background-color: rgb(246, 208, 18);
+}
+.delete-button, .update-button{
+    color: rgb(4, 187, 248);
+    font-weight:500;
+    cursor: pointer;
+}
+.save-button{
+    color: rgb(4, 187, 248);
+    font-weight:500;
+    cursor: pointer;
+    display: none;
+}
+.update-button:hover{
+    color: rgba(227, 84, 31, 0.933);
+}
+.update-input{
+    width: 30px;
+    height: 15px;
+    display: none;  
+}
+
+.delete-button:hover{
+    color: rgba(227, 84, 31, 0.933);
+}
+.save-button:hover{
+    color: rgba(227, 84, 31, 0.933);
+}
+.is-editing-quantity .update-input{
+    display: initial;
+}
+.is-editing-quantity .save-button{
+    display: initial;
 }

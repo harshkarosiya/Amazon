@@ -117,7 +117,7 @@
     font-family: Arial;   
 }
 .cart{
-    width: 40px;
+    width: 45px;
     height: 30px;
 }
 .cartquantity{
@@ -126,6 +126,6 @@
     left: 23px;
     color: rgb(254, 126, 35);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
 }
