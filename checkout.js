@@ -3,9 +3,9 @@ import {products, getProduct } from "./product.js";
 import { deliveryOptions, getdeliverOption } from "./deliveryoption.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 import { renderpaymentsumarry } from "./paymentCheckout.js";
+import './cart-class.js';
 
-const today = dayjs();
- console.log(today.format('dddd, MMMM D'));
+
  
 function renderOrderSumarry(){
     let orderSumarry = '';
