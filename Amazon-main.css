@@ -14,6 +14,49 @@
     border: 1px solid lightgray;
   
 }
+@media (max-width: 2000px) {
+    .main-grid {
+      grid-template-columns: repeat(7, 1fr);
+    }
+  }
+  
+  /* This @media means when the screen width is 1600px or
+     less, we will divide the grid into 6 columns. */
+  @media (max-width: 1600px) {
+    .main-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .main-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .main-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .main-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .main-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 .product-image{
     width: 110px;
     height: 120px;
