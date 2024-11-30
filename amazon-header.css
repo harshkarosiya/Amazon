@@ -1,7 +1,7 @@
 .amazon-header{
    display: flex;
    justify-content: space-between;
-   height: 60px;
+   height: 50px;
    width: 100%;
    align-items: center;
    background-color: black;
@@ -122,7 +122,7 @@
 }
 .cartquantity{
     position: absolute;
-    top: 7px;
+    top: 6px;
     left: 23px;
     color: rgb(254, 126, 35);
     font-family: Arial, Helvetica, sans-serif;
