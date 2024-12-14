@@ -135,3 +135,9 @@
 .add-to-cart:active{
    background-color: rgb(224, 187, 5);
 }
+.sizeLink{
+  text-decoration: none;
+  font-size: 15px;
+  font-family: arial;
+  color: indigo;
+}

@@ -6,8 +6,9 @@ let producthtml = '';
    producthtml += `   <div class="amazon-grid">
         <div class="product-image"> <img src="${product.image}" class="product-images" alt="" ></div>
         <div class="product-name">${product.name}</div>
-        <div class="product-raiting"> <img src="images/rating-${product.rating.stars *10}.png"  class="rating"> <p class="raiting-count">${product.rating.count}</p></div>
-        <div class="product-amount"> $${(product.priceCents / 100 ).toFixed(2)}</div>  
+        <div class="product-raiting"> <img src="${product.getstarurl()}"  class="rating">
+        <p class="raiting-count">${product.rating.count}</p></div>
+        <div class="product-amount">${product.getprice()}</div>  
         <select name="" id="" class="quantity">
         <option value="">1</option>
         <option value="">2</option>
@@ -20,6 +21,7 @@ let producthtml = '';
         <option value="">9</option>
         <option value="">10</option>
         </select> <br>
+        ${product.getclothing()}
 <button class="add-to-cart js-add-to-cart" data-product-id = "${product.id}">Add to Cart</button>
 </div>`
 
@@ -35,7 +37,7 @@ export function updatescore(){
 .innerHTML = cartQuantity;
 };
 updatescore();
-console.log(cart);
+
 
  document.querySelectorAll('.js-add-to-cart')
  .forEach( (button) => {

@@ -1,0 +1,12 @@
+.main-orders-box{
+    display: grid;
+    justify-content: center;
+    
+}
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial;
+    padding-top: 20px;
+    margin-left: 22%;
+}

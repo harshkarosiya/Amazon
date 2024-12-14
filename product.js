@@ -22,22 +22,36 @@ return matchingProduct;
     this.rating = productDetails.rating;
     this.priceCents = productDetails.priceCents; 
   }
+  getstarurl(){
+   return `images/rating-${this.rating.stars *10}.png`;
+  }
+
+  getprice(){
+    return `$${(this.priceCents / 100 ).toFixed(2)}`;
+  }
+
+  getclothing(){
+    return '';
+  }
  }
- const product1 = new product( {
-  id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-  image: "images/athletic-cotton-socks-6-pairs.jpg",
-  name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
-  rating: {
-    stars: 4.5,
-    count: 87
-  },
-  priceCents: 1090,
-  keywords: [
-    "socks",
-    "sports",
-    "apparel"
-  ]
-});
+
+ class clothing extends product {
+  sizeChartLink;
+
+  constructor(productDetails){
+   super(productDetails);
+
+   this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+  getclothing(){
+   return `<a href="${this.sizeChartLink}" class ="sizeLink" target="_blank">
+   Size Chart
+   </a>`;
+  }
+  }
+ 
+
 
  export const products = [
     {
@@ -700,6 +714,9 @@ return matchingProduct;
       ]
     }
   ].map((productDetails)=>{
+    if(productDetails.type === 'clothing'){
+      return new clothing(productDetails);
+    }
    return new product(productDetails);
   });
-  console.log(products);
+ 
