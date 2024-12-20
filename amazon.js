@@ -1,5 +1,8 @@
 import { products } from "./product.js";
 import { cart, addtoCart } from "./cart.js";
+import './practice-backend.js';
+
+
 
 let producthtml = '';
  products.forEach((product) => {
@@ -28,7 +31,7 @@ let producthtml = '';
 });
 document.querySelector('.js-main-grid').innerHTML = producthtml;
 
-export function updatescore(){
+function updatescore(){
   let cartQuantity = 0;
   cart.forEach((cartItem) =>{
       cartQuantity += cartItem.quantity;
@@ -46,7 +49,8 @@ updatescore();
        addtoCart(productId);
        updatescore();
      });
- });
+ })
+
  
  
 
