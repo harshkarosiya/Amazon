@@ -97,6 +97,8 @@
     color: white;
     padding-right: 4px;
     padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     margin-right: 15px;
     display: flex;
     align-items: center;
@@ -117,8 +119,8 @@
     font-family: Arial;   
 }
 .cart{
-    width: 47px;
-    height: 30px;
+    width: 45px;
+    height: 31px;
 }
 .cartquantity{
     position: absolute;
