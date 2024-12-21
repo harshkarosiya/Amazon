@@ -1,5 +1,6 @@
 import { cart, calculateQuantity } from "./cart.js";
 import { getdeliverOption } from "./deliveryoption.js";
+import { addOrder } from "./orders.js";
 import { getProduct } from "./product.js";
 
 export function renderpaymentsumarry(){
@@ -60,10 +61,27 @@ export function renderpaymentsumarry(){
             <div class="paycheck">
             <p class="use-paypal">Use PayPal</p><input type="checkbox" name="value" id="use">
             </div>
-            <button class="place-your-order">Place your order</button>
+            <button class="place-your-order js-place-order">Place your order</button>
         
     `;
     document.querySelector('.js-payment-form')
     .innerHTML = paymentSumarry;
+
+    document.querySelector('.js-place-order')
+    .addEventListener('click', async () =>{
+       const response = await fetch('https://supersimplebackend.dev/orders', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify({
+            cart: cart
+          })
+        });
+        const order =  await response.json();
+       addOrder(order);
+
+       window.location.href = 'orders.html';
+    });
    
 }
